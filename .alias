@@ -1,0 +1,34 @@
+alias ..="cd .."
+alias ...="cd ../.."
+alias dl="cd ~/Downloads"
+alias dev="cd ~/dev"
+alias g="git"
+alias h="history"
+alias v="vim"
+alias aws="noglob aws"
+alias l="ls -lFG"
+alias la="ls -laFG"
+alias grep='grep --color=auto '
+alias hosts='sudo vim /etc/hosts'
+alias cp='cp -i'
+alias mv='mv -i'
+alias pullall='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull \;'
+alias tf="terraform"
+alias ap="ansible-playbook"
+alias o="open"
+alias dc='docker-compose'
+alias d="docker"
+alias t="tmux new -A -s 0"
+alias k="kubectl"
+alias watch='watch '
+alias tree="tree -C"
+alias awsaccount="aws sts get-caller-identity --output text --query 'UserId' | cut -f 2 -d ':'"
+alias pipenv-list='for venv in ~/.local/share/virtualenvs/* ; do basename $venv; cat $venv/.project | sed "s/\(.*\)/\t\1\n/" ; done'
+alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
+alias afk="open -a /System/Library/CoreServices/ScreenSaverEngine.app"
+alias gcob='git branch | fzf | xargs git checkout'
+alias k8sprod='export TERM=xterm-256color; k9s --kubeconfig ~/kubeconfigs/production/eks-cluster-production -A'
+alias k8sstaging='export TERM=xterm-256color; k9s --kubeconfig ~/kubeconfigs/staging/eks-cluster-staging -A'
+alias k8sqa='export TERM=xterm-256color; k9s --kubeconfig ~/kubeconfigs/qa/eks-cluster-qa -A'
+alias k8sdev='export TERM=xterm-256color; k9s --kubeconfig ~/kubeconfigs/dev/eks-cluster-dev -A'
+alias k8stc='export TERM=xterm-256color; k9s --kubeconfig /Users/mijndert.stuij/dev/personal/tc/platform/configs/production/output/kubeconfig.yaml -A'
