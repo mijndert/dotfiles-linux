@@ -24,6 +24,6 @@ sudo -u mijndert bash -c 'cd /home/mijndert && git clone https://aur.archlinux.o
 
 # Install zsh plugins
 echo "Installing zsh plugins..."
-sudo -u mijndert yay -S --noconfirm zsh-pure-prompt zsh-autosuggestions zsh-completions zsh-syntax-highlighting
+sudo -u mijndert yay -S --noconfirm zsh-pure-prompt
 
 echo "Arch Linux setup complete!"
