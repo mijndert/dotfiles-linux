@@ -1,4 +1,5 @@
 #!/usr/sbin/bash
+
 # Install zsh plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
@@ -18,3 +19,4 @@ ln -sf "$DOTFILES_DIR/.tmux.conf" ~
 ln -sf "$DOTFILES_DIR/.vimrc" ~
 ln -sf "$DOTFILES_DIR/.curlrc" ~
 ln -sf "$DOTFILES_DIR/.ripgreprc" ~
+ln -sf "$DOTFILES_DIR/k9s_config.yml" ~/.config/k9s/config.yaml
