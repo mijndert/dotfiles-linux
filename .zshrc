@@ -1,6 +1,8 @@
 export EDITOR=vim
-export PATH=:$PATH
+export PATH=$PATH
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
+
+fpath+=($HOME/.zsh/pure)
 
 bindkey "^R" history-incremental-search-backward
 
