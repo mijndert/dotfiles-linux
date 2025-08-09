@@ -8,7 +8,7 @@ echo "Starting Arch Linux setup..."
 # Update system and install packages
 echo "Updating system and installing packages..."
 sudo pacman -Syu --noconfirm
-sudo pacman -S --noconfirm --needed git base-devel zsh nodejs npm kubectl terraform helm fzf gawk direnv aws-cli opentofu k9s go-task
+sudo pacman -S --noconfirm --needed git base-devel zsh nodejs npm kubectl terraform helm fzf gawk direnv aws-cli opentofu k9s go-task vim tmux
 
 # Change shell to zsh for current user
 echo "Changing shell to zsh..."
