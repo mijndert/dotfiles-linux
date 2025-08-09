@@ -26,6 +26,10 @@ packages=(
     go-task
     vim
     tmux
+    ripgrep
+    talosctl
+    tree
+    jq
 )
 
 # Install packages
