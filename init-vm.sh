@@ -1,14 +1,36 @@
 #!/usr/sbin/bash
-
-# Arch Linux setup script
 set -e
 
 echo "Starting Arch Linux setup..."
 
-# Update system and install packages
-echo "Updating system and installing packages..."
+# Update system
+echo "Updating system..."
 sudo pacman -Syu --noconfirm
-sudo pacman -S --noconfirm --needed git base-devel zsh nodejs npm kubectl terraform helm fzf gawk direnv aws-cli opentofu k9s go-task vim tmux
+
+# Define packages to install
+packages=(
+    git
+    base-devel
+    zsh
+    nodejs
+    npm
+    kubectl
+    terraform
+    helm
+    fzf
+    gawk
+    direnv
+    aws-cli
+    opentofu
+    k9s
+    go-task
+    vim
+    tmux
+)
+
+# Install packages
+echo "Installing packages: ${packages[*]}"
+sudo pacman -S --noconfirm --needed "${packages[@]}"
 
 # Change shell to zsh for current user
 echo "Changing shell to zsh..."
@@ -36,7 +58,7 @@ curl -L https://github.com/catppuccin/k9s/archive/main.tar.gz | tar xz -C "$OUT"
 echo "Placing dotfiles..."
 mkdir -p /home/mijndert/dev/personal && mkdir -p /home/mijndert/dev/work
 cd /home/mijndert/dev/personal
-git clone https://github.com/mijndert/dotfiles-linux.git
+git clone git@github.com:mijndert/dotfiles-linux.git
 cd dotfiles-linux
 sh ./install.sh
 
