@@ -65,7 +65,6 @@ curl -L https://github.com/catppuccin/k9s/archive/main.tar.gz | tar xz -C "$OUT"
 
 # Place dotfiles 
 echo "Placing dotfiles..."
-ssh-keyscan github.com >> ~/.ssh/known_hosts
 mkdir -p /home/mijndert/dev/personal && mkdir -p /home/mijndert/dev/work
 cd /home/mijndert/dev/personal
 git clone git@github.com:mijndert/dotfiles-linux.git
