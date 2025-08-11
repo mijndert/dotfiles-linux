@@ -21,6 +21,7 @@ packages=(
     talosctl
     tree
     jq
+    python
 )
 
 # Install packages
