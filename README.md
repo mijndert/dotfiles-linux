@@ -3,7 +3,7 @@
 Create and bootstrap the VM
 
 ```sh
-orb create arch arch && orb -m arch ./init-vm.sh
+orb create -u mijndert arch arch && orb -m arch ./init-vm.sh
 ```
 
 Copy ghostty terminfo
