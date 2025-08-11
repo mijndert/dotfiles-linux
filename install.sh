@@ -13,6 +13,10 @@ if [ ! -d ~/.zsh/fzf-tab ]; then
     git clone https://github.com/Aloxaf/fzf-tab ~/.zsh/fzf-tab
 fi
 
+# Vim plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 # Get the absolute path of the script directory
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 
