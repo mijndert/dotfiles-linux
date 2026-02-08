@@ -1,5 +1,7 @@
 # dotfiles-linux
 
+My dotfiles for Linux using [OrbStack](https://orbstack.dev) and [Arch Linux](https://archlinux.org).
+
 Create and bootstrap the VM
 
 ```sh

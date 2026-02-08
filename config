@@ -16,3 +16,7 @@ Host github.com
   IdentityFile ~/.ssh/id_ed25519
   User git
   IdentitiesOnly yes
+
+# Gitea
+Host ssh.mijndert.dev
+  ProxyCommand cloudflared access ssh --hostname %h

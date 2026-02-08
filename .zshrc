@@ -1,13 +1,14 @@
 export EDITOR=vim
 export PATH=$PATH
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
+export BAT_THEME="Catppuccin Mocha"
 
 fpath+=($HOME/.zsh/pure)
 
 bindkey "^R" history-incremental-search-backward
 
 setopt SHARE_HISTORY HIST_IGNORE_DUPS
-SAVEHIST=5000
+SAVEHIST=50000
 HISTFILE=~/.zsh_history
 
 autoload -U promptinit; promptinit

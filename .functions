@@ -15,3 +15,25 @@ kubectl () {
         KUBECTL_COMPLETE=1 
     fi
 }
+
+batdiff() {
+    git diff --name-only --relative --diff-filter=d -z | xargs -0 bat --diff
+}
+
+eks-auth() {
+  local env="$1"
+  local role="${2:-aws_administrators}"
+
+  task -d "$HOME/dev/work/kubernetes-auth" "eks-$env" role="$role"
+}
+
+weeks() {
+  local target="1987-08-13"
+  local now_ts target_ts diff_days
+
+  now_ts=$(gdate +%s)
+  target_ts=$(gdate -d "$target" +%s)
+  diff_days=$(( (now_ts - target_ts) / 86400 ))
+
+  echo "It's been $(( diff_days / 7 )) weeks since $target"
+}
