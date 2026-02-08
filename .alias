@@ -30,6 +30,6 @@ alias k8sprod='k9s --kubeconfig /Users/mijndert/kubeconfigs/eks-cluster-producti
 alias k8sstaging='k9s --kubeconfig /Users/mijndert/kubeconfigs/eks-cluster-staging-kubeconfig -A'
 alias k8sqa='k9s --kubeconfig /Users/mijndert/kubeconfigs/eks-cluster-qa-kubeconfig -A'
 alias k8sdev='k9s --kubeconfig /Users/mijndert/kubeconfigs/eks-cluster-dev-kubeconfig -A'
-alias k8stoot='k9s --kubeconfig /Users/mijndert/dev/personal/toot/platform/platform/configs/output/kubeconfig-production.yaml -A'
+alias k8stoot='k9s --kubeconfig /Users/mijndert/dev/personal/toot/platform/platform/configs/output/kubeconfig-test-metal.yaml -A'
 alias task='go-task'
 alias systemupdate='sudo pacman -Syu'
