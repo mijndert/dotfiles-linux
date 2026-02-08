@@ -4,9 +4,9 @@ set -e
 echo "Starting Arch Linux setup..."
 
 # Set mirror
-sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-sudo touch /etc/pacman.d/mirrorlist
-echo "Server = https://eu.mirror.archlinuxarm.org/\$arch/\$repo" | sudo tee /etc/pacman.d/mirrorlist
+# sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+# sudo touch /etc/pacman.d/mirrorlist
+# echo "Server = https://eu.mirror.archlinuxarm.org/\$arch/\$repo" | sudo tee /etc/pacman.d/mirrorlist
 
 # Update system
 echo "Updating system..."
