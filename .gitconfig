@@ -27,9 +27,9 @@
 	default = current
 	autoSetupRemote = true
 
-[includeIf "gitdir:~/dev/personal/"]
+[includeIf "gitdir:/Users/mijndert/dev/personal/"]
     path = ~/.gitconfig-personal
-[includeIf "gitdir:~/dev/work/"]
+[includeIf "gitdir:/Users/mijndert/dev/work/"]
     path = ~/.gitconfig-work
 
 [alias]

@@ -3,11 +3,6 @@ set -e
 
 echo "Starting Arch Linux setup..."
 
-# Set mirror
-# sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-# sudo touch /etc/pacman.d/mirrorlist
-# echo "Server = https://eu.mirror.archlinuxarm.org/\$arch/\$repo" | sudo tee /etc/pacman.d/mirrorlist
-
 # Update system
 echo "Updating system..."
 sudo pacman -Syu --noconfirm
@@ -33,7 +28,12 @@ sudo -u mijndert bash -c 'rm -rf /home/mijndert/yay'
 mkdir -p  /home/mijndert/.zsh
 git clone https://github.com/sindresorhus/pure.git /home/mijndert/.zsh/pure
 
+# Symlink .aws directory from host to VM
+echo "Symlinking .aws directory from host to VM..."
+ln -s /Users/mijndert/.aws ~/.aws 
+
 # Install k9s theme
+echo "Installing k9s theme..."
 OUT="${XDG_CONFIG_HOME:-$HOME/.config}/k9s/skins"
 mkdir -p "$OUT"
 curl -L https://github.com/catppuccin/k9s/archive/main.tar.gz | tar xz -C "$OUT" --strip-components=2 k9s-main/dist
